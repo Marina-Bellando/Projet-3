@@ -1,6 +1,3 @@
-    // Pour mettre les éléments dans la div gallery
-const gallery = document.querySelector(".gallery");
-
     // Récupération des données de l'API
 async function recupererProjets() {
     try {
@@ -31,6 +28,19 @@ function creerProjet(work) {
     figure.appendChild(figcaption);
     gallery.appendChild(figure);
 }
+
+    // Fonction pour supprimer les projets dans la div "gallery"
+function supprimerFigures() {
+    const figures = document.querySelectorAll(".gallery figure");
+    // prendre toutes les "figure" et les supprimer
+    figures.forEach(figure => {
+        figure.parentNode.removeChild(figure);
+    });
+}
+
+    // Pour mettre les éléments dans la div gallery
+    const gallery = document.querySelector(".gallery");
+
     // Fonction pour afficher les projets
 async function afficherProjet() {
     const projets = await recupererProjets();
@@ -38,7 +48,9 @@ async function afficherProjet() {
         creerProjet(work);
     }
 }
-        // Appel de la fonction afficher les projets
-    afficherProjet();
+    // Appel de la fonction pour supprimer les figures
+supprimerFigures();
+    // Appel de la fonction afficher les projets
+afficherProjet();
 
     
