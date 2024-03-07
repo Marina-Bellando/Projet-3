@@ -48,10 +48,6 @@ async function afficherProjet() {
         creerProjet(work);
     }
 }
-    // Appel de la fonction pour supprimer les figures
-supprimerFigures();
-    // Appel de la fonction afficher les projets
-afficherProjet();
 
     // Récupération des données catégories de l'API
 async function recupererCategories() {
@@ -62,7 +58,15 @@ async function recupererCategories() {
         }
         const data = await response.json();
         console.log(data);
-        return data;       
+    // Set pour stocker les IDs des catégories
+        const categoriesSet = new Set();
+        data.forEach(category => {
+            categoriesSet.add(category.name);
+        });
+    // Convertion de Set en tableau
+        const categories = Array.from(categoriesSet);
+        console.log(categories);
+        return categories;
     } catch (error) {
         console.error(error.message);
         return [];
@@ -78,38 +82,38 @@ async function creerBoutons() {
         const btnTous = document.createElement("button");
         btnTous.textContent = "Tous";
         btnTous.addEventListener("click", function() {
-        // Appel de la fonction pour afficher tous les projets
+    // Appel de la fonction pour afficher tous les projets
             afficherTousProjets();
         });
         filtres.appendChild(btnTous);
     // Créer les boutons de filtres pour chaque catégorie
         categories.forEach(category => {
             const btnFiltrer = document.createElement("button");
-            btnFiltrer.textContent = category.name;
+            btnFiltrer.textContent = category; 
             btnFiltrer.addEventListener("click", function() {
-        // Appel de la fonction de filtres avec l'ID de la catégorie
-                filtrerParCategorie(category.id);
-            });
-            filtres.appendChild(btnFiltrer);
+                filtrerParCategorie(category);
+        });
+        filtres.appendChild(btnFiltrer);
         });
     } catch (error) {
-        console.error("Erreur lors de la création des boutons de filtre :", error.message);
+        console.error(error.message);
     }
 }
     // Fonction pour afficher tous les projets
 async function afficherTousProjets() {
     supprimerFigures();
-    afficherProjet();
+    await afficherProjet();
 }
     // Fonction pour filtrer les éléments par catégorie
-async function filtrerParCategorie(categorieId) {
+async function filtrerParCategorie(categorie) {
     supprimerFigures();
     const projets = await recupererProjets();
     for (const work of projets) {
-        if (work.category.id === categorieId) {
+        if (work.category.name === categorie) {
             creerProjet(work);
         }    
     }
 }
+
     // Appel de la fonction pour créer les boutons de filtre
 creerBoutons();
