@@ -185,4 +185,23 @@ footer nav ul {
 	justify-content: flex-end;
 	margin: 2em
 }
+.filtres {
+	margin-left: 350px;
+}
+.filtres button {
+	font-family: 'Syne';
+	font-weight: 700;
+	color: #1D6154;
+	background-color: white;
+	margin : 2em auto ;
+	text-align: center;
+	border-radius: 60px ;
+	border-color: #1D6154;
+	border-width: 1px;
+	margin-right: 10px; 
+}
+.filtres button:focus {
+	color: white;
+	background-color: #1D6154;
+}
 
