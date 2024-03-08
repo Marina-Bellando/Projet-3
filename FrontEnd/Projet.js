@@ -57,7 +57,6 @@ async function recupererCategories() {
             throw new Error(`Erreur de récupération des projets.`);
         }
         const data = await response.json();
-        console.log(data);
     // Set pour stocker les IDs des catégories
         const categoriesSet = new Set();
         data.forEach(category => {
