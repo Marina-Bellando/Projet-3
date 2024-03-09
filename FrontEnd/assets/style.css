@@ -186,7 +186,7 @@ footer nav ul {
 	margin: 2em
 }
 .filtres {
-	margin-left: 350px;
+	margin-left: 280px;
 }
 .filtres button {
 	font-family: 'Syne';
@@ -199,6 +199,9 @@ footer nav ul {
 	border-color: #1D6154;
 	border-width: 1px;
 	margin-right: 10px; 
+	height: 37px;
+	padding-left: 30px;
+	padding-right: 30px;
 }
 .filtres button:focus {
 	color: white;
