@@ -207,6 +207,7 @@ footer nav ul {
 	color: white;
 	background-color: #1D6154;
 }
+
 	/*Login*/
 #MdpO {
 	margin: auto;
@@ -214,6 +215,9 @@ footer nav ul {
 nav ul li a {
 	text-decoration: none;
 	color: inherit;
+}
+#error-message {
+	color:#B1663C;
 }
 
 
