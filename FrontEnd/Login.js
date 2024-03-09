@@ -1,8 +1,11 @@
 async function authentification () {
+    // Pour sélectionner le formulaire de connexion du html
     const formulaireConnexion = document.querySelector("#contact form");
     formulaireConnexion.addEventListener("submit", async function(event) {
+    // Evite le chargement d'une nouvelle page
         event.preventDefault();
 
+    // Récupération des valeurs email et password du formulaire
         let connexion = {
             email: document.getElementById("email").value,
             password: document.getElementById("password").value,
@@ -16,22 +19,34 @@ async function authentification () {
             });
 
             if (response.ok) {
+        // Converti la réponse en JSON pour pouvoir les extraire
+                const responseData = await response.json();
+                const token = responseData.token;
+        // Stocke le token d'authentification dans le localStorage
+                localStorage.setItem("token", token);
+
                 console.log("Autentification réussie !");
-    // Dirige sur la page d'accueil
+    // Si authentification ok = Dirige sur la page d'accueil
                 window.location.href = "index.html";
             }else {
+    // Si ça échoue, récupère le message d'erreur envoyé par le serveur
                 const errorMessage = await response.text();
                 console.error("Erreur d'authentification:", errorMessage);
+                document.getElementById("error-message").innerText = "Email ou mot de passe incorrect.";
             }
         }catch (error){
-
             console.error("Erreur de connexion au serveur:", error);
         }
 
     });
 }
 
-// Appel fonction d'authentification pour qu'elle s'exécute quand page chargée
+    // Récupére le token d'authentification depuis le localStorage
+function getToken() {
+    return localStorage.getItem("token");
+}
+
+    // Appel fonction d'authentification pour qu'elle s'exécute quand page chargée
 document.addEventListener("DOMContentLoaded", function() {
     authentification();
 });
