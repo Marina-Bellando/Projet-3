@@ -32,7 +32,7 @@ async function authentification () {
     // Si ça échoue, récupère le message d'erreur envoyé par le serveur
                 const errorMessage = await response.text();
                 console.error("Erreur d'authentification:", errorMessage);
-                document.getElementById("error-message").innerText = "Email ou mot de passe incorrect.";
+                document.getElementById("error-message").innerText = "Erreur dans l'identifiannt ou le mot de passe.";
             }
         }catch (error){
             console.error("Erreur de connexion au serveur:", error);
