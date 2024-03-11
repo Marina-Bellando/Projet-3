@@ -211,6 +211,7 @@ footer nav ul {
 	/*Login*/
 #MdpO {
 	margin: auto;
+	color: inherit;
 }
 nav ul li a {
 	text-decoration: none;
