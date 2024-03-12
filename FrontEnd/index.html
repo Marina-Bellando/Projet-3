@@ -10,15 +10,22 @@
 	<meta name="description" content="">
 	<link rel="stylesheet" href="./assets/style.css">
 	<script src="Projet.js" defer></script>
+	<script src="Login.js" defer></script>
+	<script src="Modale.js" defer></script>
+	<script src="https://kit.fontawesome.com/1c56793117.js" crossorigin="anonymous"></script>
 </head>
 <body>
+<header id="mode-edition">
+	<i class="fa-regular fa-pen-to-square"></i>
+	<p>Mode édition</p>
+</header>
 <header>
 	<h1>Sophie Bluel <span>Architecte d'intérieur</span></h1>
 	<nav>
 		<ul>
 			<li>projets</li>
 			<li>contact</li>
-			<li><a href="login.html">login</a></li>
+			<li><a href="login.html" id="lien-login">login</a></li>
 			<li><img src="./assets/icons/instagram.png" alt="Instagram"></li>
 		</ul>
 	</nav>
@@ -36,7 +43,24 @@
 		</article>
 	</section>
 	<section id="portfolio">
-		<h2>Mes Projets</h2>
+		<h2>Mes Projets <a href="#modal1" class="js-modal"><i class="fa-regular fa-pen-to-square"></i>modifier</a></h2>
+
+		<aside id="modal1" class="modal" aria-hidden="true" role="dialog" aria-labelledby="titlemodal" style="display: none;">
+			<div class="modal-wrapper js-modal-stop">
+				<button class="js-modal-close"><i class="fa-solid fa-xmark"></i></button>
+				<h3 id="titlemodal">Galerie photo</h3>
+				<button class="btn-AjoutPhoto">Ajouter une photo</button>
+				<div id="modal-ajout-photo">
+					<button class="retourner-modal1"><i class="fa-solid fa-arrow-left"></i></button>
+					<button class="js-modal-close"><i class="fa-solid fa-xmark"></i></button>
+					<h3 id="titlemodal">Ajout Photo</h3>
+					<form action="#" method="post">
+						
+					</form>
+				</div>
+			</div>
+		</aside>
+		
 		<div class="filtres">
 
 		</div>
