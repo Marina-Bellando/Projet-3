@@ -52,6 +52,7 @@ body {
 	margin:auto;
 	font-family: 'Work Sans' ;
 	font-size: 14px;
+	background-color: #fffef8;
 }
 header {
 	display: flex;
@@ -179,7 +180,10 @@ input[type="submit"]{
 	text-align: center;
 	border-radius: 60px ;
 }
-
+footer {
+	background-color: #ffffff;
+	height: 60px;
+}
 footer nav ul {
 	display: flex;
 	justify-content: flex-end;
@@ -192,7 +196,7 @@ footer nav ul {
 	font-family: 'Syne';
 	font-weight: 700;
 	color: #1D6154;
-	background-color: white;
+	background-color: #FFFEF8;
 	margin : 2em auto ;
 	text-align: center;
 	border-radius: 60px ;
@@ -209,6 +213,10 @@ footer nav ul {
 }
 
 	/*Login*/
+#contact {
+	padding-top: 90px;
+	padding-bottom: 180px;
+}
 #MdpO {
 	margin: auto;
 	color: inherit;
@@ -220,5 +228,86 @@ nav ul li a {
 #error-message {
 	color:#B1663C;
 }
+	/*Après Connexion effectuée*/
+#mode-edition {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #000000;
+	color: #ffffff;
+	height: 59px;
+	margin-top: 0;
+	font-family: "Work Sans";
+	font-size: 16px;
+	font-weight: 400;
+}
+#mode-edition i{
+margin-right: 15px;
+}
+#portfolio h2 a {
+	text-decoration: none;
+	font-family: "Work Sans";
+	font-weight: 400;
+	color: black;
+	font-size: 14px;
+}
+	
+#portfolio a .fa-pen-to-square {
+	margin-right: 15px;
+	margin-left: 30px;
+}
 
-
+	/*Modale*/
+*:focus {
+	box-shadow: 0 0 10px #B1663C;
+}
+.modal {
+	position: fixed;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.08);
+}
+.modal-wrapper {
+	overflow: auto;
+	width : 630px;
+	max-width: calc(100vw - 20px);
+	max-height: calc(100vh -20px);
+	padding: 20px;
+	background-color: #ffffff;
+	position: relative;
+	border-radius: 10px;
+	text-align: center;
+}
+.js-modal-close {
+	position:absolute;
+	font-size: 12px;
+	top:6px;
+	right:6px;
+	background-color: #ffffff;
+	border: none;
+}
+#modal1 #titlemodal {
+	font-family: "Work Sans";
+	font-weight: 400;
+    font-size: 26px;
+    color: black;
+    margin-bottom: 40px;
+	text-align: center;
+}
+#modal1 .btn-AjoutPhoto {
+    font-family: "Syne";
+	font-weight: 700;
+	color: white;
+	background-color: #1D6154;
+	margin : 2em auto;
+	width: 180px;
+	height: 36px;
+	text-align: center;
+	border-radius: 60px;
+	border: none;
+}
