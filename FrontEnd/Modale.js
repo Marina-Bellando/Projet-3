@@ -12,8 +12,6 @@ document.addEventListener("DOMContentLoaded", function() {
 authentification();
 });
 
-
-
 let modal = null
 const focusableSelector = "button, a, input, textarea"
 let focusables = []
