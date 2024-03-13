@@ -258,9 +258,7 @@ margin-right: 15px;
 }
 
 	/*Modale*/
-*:focus {
-	box-shadow: 0 0 10px #B1663C;
-}
+
 .modal {
 	position: fixed;
 	display: flex;
@@ -285,8 +283,7 @@ margin-right: 15px;
 }
 .js-modal-close {
 	position:absolute;
-	font-size: 12px;
-	top:6px;
+	font-size: 18px;
 	right:6px;
 	background-color: #ffffff;
 	border: none;
@@ -309,5 +306,78 @@ margin-right: 15px;
 	height: 36px;
 	text-align: center;
 	border-radius: 60px;
+	border: none;
+}
+
+	/*Modale Ajout Photo*/
+#modal-ajout-photo {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.retourner-modal1 {
+	position: absolute;
+	font-size: 21px;
+	left: 20px;
+	background-color: #ffffff;
+	border: none;
+}
+#titlemodal {
+	position: relative;
+	top: 34px;
+}
+.cadre-ajouter-photo {
+	background-color: #e8f1f6;
+	width: 420px;
+	height: 169px;
+	border-radius: 3px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.fa-regular.fa-image {
+    font-size: 76px;
+	margin-top: 15px;
+	margin-bottom: 7px;
+	color: #b9c5cc;
+}
+.btn-ajouterPhoto {
+	width: 173px;
+	height: 36px;
+	border-radius: 50px;
+	background-color: #C8D6DC;
+	border: none;
+	color: #306685;
+	margin-bottom: 7px;
+}
+.format-photo {
+	font-family: "Work Sans";
+	font-size: 10px;
+	font-weight: 400;
+	color: #444444;
+}
+#formulaire-ajoutPhoto {
+	width: 420px;
+}
+#modal-ajout-photo form{
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-gap: 10px;
+}
+#modal-ajout-photo label {
+	text-align: left;
+}
+#modal-ajout-photo select {
+	width: 420px;
+	height: 51px;
+	box-shadow: 0px 4px 14px 0px #00000017;
+	border: none;
+}
+#modal-ajout-photo input[type="text"] {
+	width: 420px;
+	height: 51px;
+	box-shadow: 0px 4px 14px 0px #00000017;
 	border: none;
 }
