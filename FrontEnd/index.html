@@ -47,15 +47,31 @@
 
 		<aside id="modal1" class="modal" aria-hidden="true" role="dialog" aria-labelledby="titlemodal" style="display: none;">
 			<div class="modal-wrapper js-modal-stop">
-				<button class="js-modal-close"><i class="fa-solid fa-xmark"></i></button>
-				<h3 id="titlemodal">Galerie photo</h3>
-				<button class="btn-AjoutPhoto">Ajouter une photo</button>
+				<div class="modal-galerie-photo">
+					<button class="js-modal-close"><i class="fa-solid fa-xmark"></i></button>
+					<h3 id="titlemodal">Galerie photo</h3>
+					<button class="btn-AjoutPhoto">Ajouter une photo</button>
+				</div>
 				<div id="modal-ajout-photo">
 					<button class="retourner-modal1"><i class="fa-solid fa-arrow-left"></i></button>
 					<button class="js-modal-close"><i class="fa-solid fa-xmark"></i></button>
 					<h3 id="titlemodal">Ajout Photo</h3>
-					<form action="#" method="post">
-						
+					<div class ="cadre-ajouter-photo">
+						<i class="fa-regular fa-image"></i>
+						<button class="btn-ajouterPhoto">+ Ajouter photo</button>
+						<p class="format-photo">jpg, png : 4mo max</p>
+					</div>
+					<form action="#" method="post" id="formulaire-ajoutPhoto">
+						<label for="titre">Titre</label>
+						<input type="text" name="titre" id="titre">
+						<label for="categorie">Catégorie</label>
+						<select name="categorie" id="categorie">
+							<option value="disabled" selected></option>
+							<option value="Objets">Objets</option>
+							<option value="Appartements">Appartements</option>
+							<option value="Hotels&restaurants">Hotels & restaurants</option>
+						</select>
+						<input type="submit" value="Valider">
 					</form>
 				</div>
 			</div>
