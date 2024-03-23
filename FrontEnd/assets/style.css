@@ -323,8 +323,8 @@ margin-right: 15px;
 }
 .delete-icon {
     position: absolute;
-	top :0;
-	right: 0;
+	top :6px;
+	right: 4px;
     z-index: 1;
 }
 .fa-trash-can {
@@ -393,6 +393,11 @@ margin-right: 15px;
 	border: none;
 	color: #306685;
 	margin-bottom: 7px;
+    line-height: 36px;
+	text-align: center !important;
+}
+#input-photo {
+    display: none;
 }
 .format-photo {
 	font-family: "Work Sans";
