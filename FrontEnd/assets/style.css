@@ -326,6 +326,9 @@ margin-right: 15px;
 	top :6px;
 	right: 4px;
     z-index: 1;
+	padding: 0;
+	border: none;
+	border-radius: 2px;
 }
 .fa-trash-can {
 	color: #ffffff;
