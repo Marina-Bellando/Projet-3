@@ -50,6 +50,8 @@
 				<div class="modal-galerie-photo">
 					<button class="js-modal-close"><i class="fa-solid fa-xmark"></i></button>
 					<h3 id="titlemodal">Galerie photo</h3>
+					<div class="galerie-photo"></div>
+					<div class="separateur"></div>
 					<button class="btn-AjoutPhoto">Ajouter une photo</button>
 				</div>
 				<div id="modal-ajout-photo">
@@ -58,7 +60,8 @@
 					<h3 id="titlemodal">Ajout Photo</h3>
 					<div class ="cadre-ajouter-photo">
 						<i class="fa-regular fa-image"></i>
-						<button class="btn-ajouterPhoto">+ Ajouter photo</button>
+						<label for="input-photo" class="btn-ajouterPhoto">+ Ajouter photo</label>
+						<input type="file" id="input-photo">
 						<p class="format-photo">jpg, png : 4mo max</p>
 					</div>
 					<form action="#" method="post" id="formulaire-ajoutPhoto">
@@ -71,7 +74,8 @@
 							<option value="Appartements">Appartements</option>
 							<option value="Hotels&restaurants">Hotels & restaurants</option>
 						</select>
-						<input type="submit" value="Valider">
+						<div class="separateur"></div>
+						<input type="submit" value="Valider" class="btn-valider">
 					</form>
 				</div>
 			</div>
