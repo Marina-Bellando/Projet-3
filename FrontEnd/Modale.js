@@ -75,3 +75,33 @@ window.addEventListener("keydown", function (e) {
         focusInModal(e)
     }
 })
+
+    // Fonction pour créer les éléments à la modale 
+function creerProjet2(work) {
+    // Créer les éléments pour chaque partie
+        const figure = document.createElement("figure");
+        const img = document.createElement("img");
+        const deleteIcon = document.createElement("span");
+    // Définit les éléments
+        img.src = work.imageUrl;
+        deleteIcon.innerHTML = '<i class="fa-solid fa-trash-can"></i>';
+    // Ajout des classes pour la grille
+        figure.classList.add("gallery-photo");
+        deleteIcon.classList.add("delete-icon");
+    // Ajout des éléments
+        figure.appendChild(img);
+        figure.appendChild(deleteIcon);
+        galeriePhoto.appendChild(figure);
+    }
+    // Pour mettre les éléments dans la div galerie-photo
+const galeriePhoto = document.querySelector(".galerie-photo");
+    
+    // Fonction pour afficher les projets
+async function afficherProjet2() {
+    const projets = await recupererProjets();
+    for (const work of projets) {
+        creerProjet2(work);
+    }
+}
+
+afficherProjet2();
