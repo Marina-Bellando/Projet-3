@@ -52,6 +52,7 @@ body {
 	margin:auto;
 	font-family: 'Work Sans' ;
 	font-size: 14px;
+	background-color: #fffef8;
 }
 header {
 	display: flex;
@@ -179,7 +180,10 @@ input[type="submit"]{
 	text-align: center;
 	border-radius: 60px ;
 }
-
+footer {
+	background-color: #ffffff;
+	height: 60px;
+}
 footer nav ul {
 	display: flex;
 	justify-content: flex-end;
@@ -192,7 +196,7 @@ footer nav ul {
 	font-family: 'Syne';
 	font-weight: 700;
 	color: #1D6154;
-	background-color: white;
+	background-color: #FFFEF8;
 	margin : 2em auto ;
 	text-align: center;
 	border-radius: 60px ;
@@ -209,8 +213,16 @@ footer nav ul {
 }
 
 	/*Login*/
+.Loginhtml {
+	font-weight: bold;
+}
+#contact {
+	padding-top: 90px;
+	padding-bottom: 180px;
+}
 #MdpO {
 	margin: auto;
+	color: inherit;
 }
 nav ul li a {
 	text-decoration: none;
@@ -219,5 +231,215 @@ nav ul li a {
 #error-message {
 	color:#B1663C;
 }
+	/*Après Connexion effectuée*/
+#mode-edition {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #000000;
+	color: #ffffff;
+	height: 59px;
+	margin-top: 0;
+	font-family: "Work Sans";
+	font-size: 16px;
+	font-weight: 400;
+}
+#mode-edition i{
+margin-right: 15px;
+}
+#portfolio h2 a {
+	text-decoration: none;
+	font-family: "Work Sans";
+	font-weight: 400;
+	color: black;
+	font-size: 14px;
+}
+	
+#portfolio a .fa-pen-to-square {
+	margin-right: 15px;
+	margin-left: 30px;
+}
 
+	/*Modale*/
 
+.modal {
+	position: fixed;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.08);
+}
+.modal-wrapper {
+	overflow: auto;
+	width : 630px;
+	max-width: calc(100vw - 20px);
+	max-height: calc(100vh -20px);
+	padding: 20px;
+	background-color: #ffffff;
+	position: relative;
+	border-radius: 10px;
+	text-align: center;
+}
+.modal-galerie-photo{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.js-modal-close {
+	font-size: 18px;
+	right:6px;
+	background-color: #ffffff;
+	border: none;
+	margin-left: auto;
+}
+#titlemodal {
+	font-family: "Work Sans";
+	font-weight: 400;
+    font-size: 26px;
+    color: black;
+    margin-bottom: 40px;
+	text-align: center;
+}
+.galerie-photo{
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: repeat(3, auto);
+	grid-column-gap: 10px;
+	grid-row-gap: 30px;
+	margin-top: 40px;
+	margin-bottom: 30px;
+	width: 420px;
+}
+.gallery-photo img {
+	max-width: 100%;
+	height: auto;
+}
+.gallery-photo {
+	position: relative;
+}
+.delete-icon {
+    position: absolute;
+	top :6px;
+	right: 4px;
+    z-index: 1;
+	padding: 0;
+	border: none;
+	border-radius: 2px;
+}
+.fa-trash-can {
+	color: #ffffff;
+	background-color: #000000;
+	border: 4px solid #000000;
+	border-radius: 2px;
+	padding: 2%;
+}
+.modal-galerie-photo .separateur {
+	width: 420px;
+}
+#modal1 .btn-AjoutPhoto {
+    font-family: "Syne";
+	font-weight: 700;
+	color: white;
+	background-color: #1D6154;
+	width: 180px;
+	height: 36px;
+	text-align: center;
+	border-radius: 60px;
+	border: none;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+	/*Modale Ajout Photo*/
+#modal-ajout-photo {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.retourner-modal1 {
+	position: absolute;
+	font-size: 21px;
+	left: 20px;
+	background-color: #ffffff;
+	border: none;
+}
+#titlemodal {
+	position: relative;
+	top: 34px;
+}
+.cadre-ajouter-photo {
+	background-color: #e8f1f6;
+	width: 420px;
+	height: 169px;
+	border-radius: 3px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.fa-regular.fa-image {
+    font-size: 76px;
+	margin-top: 15px;
+	margin-bottom: 7px;
+	color: #b9c5cc;
+}
+.btn-ajouterPhoto {
+	width: 173px;
+	height: 36px;
+	border-radius: 50px;
+	background-color: #C8D6DC;
+	border: none;
+	color: #306685;
+	margin-bottom: 7px;
+    line-height: 36px;
+	text-align: center !important;
+}
+#input-photo {
+    display: none;
+}
+.format-photo {
+	font-family: "Work Sans";
+	font-size: 10px;
+	font-weight: 400;
+	color: #444444;
+}
+#formulaire-ajoutPhoto {
+	width: 420px;
+}
+#modal-ajout-photo form{
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-gap: 10px;
+}
+#modal-ajout-photo label {
+	text-align: left;
+}
+#modal-ajout-photo select {
+	width: 420px;
+	height: 51px;
+	box-shadow: 0px 4px 14px 0px #00000017;
+	border: none;
+	background-color: #ffffff;
+}
+#modal-ajout-photo input[type="text"] {
+	width: 420px;
+	height: 51px;
+	box-shadow: 0px 4px 14px 0px #00000017;
+	border: none;
+}
+input[type="submit"].btn-valider {
+	background-color: #A7A7A7;
+	border: none;
+	height: 36px;
+	margin-top: 0;
+}
+.separateur {
+    border-top: 1px solid #B3B3B3;
+    margin-top: 25px;
+    margin-bottom: 20px;
+}
