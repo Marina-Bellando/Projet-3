@@ -79,22 +79,31 @@ window.addEventListener("keydown", function (e) {
     // Fonction pour créer les éléments à la modale 
 function creerProjet2(work) {
     // Créer les éléments pour chaque partie
-        const figure = document.createElement("figure");
-        const img = document.createElement("img");
-        const deleteIcon = document.createElement("button");
+    const figure = document.createElement("figure");
+    const img = document.createElement("img");
+    const deleteIcon = document.createElement("button");
     // Définit les éléments
-        img.src = work.imageUrl;
-        deleteIcon.innerHTML = '<i class="fa-solid fa-trash-can"></i>';
+    img.src = work.imageUrl;
+    deleteIcon.innerHTML = '<i class="fa-solid fa-trash-can"></i>';
     // Ajout des classes pour la grille
-        figure.classList.add("gallery-photo");
-        deleteIcon.classList.add("delete-icon");
+    figure.classList.add("gallery-photo");
+    deleteIcon.classList.add("delete-icon");
     // Ajout de l'attribut data-work-id au bouton de suppression
-        deleteIcon.dataset.workId = work.id;
+    deleteIcon.dataset.workId = work.id;
     // Ajout des éléments
-        figure.appendChild(img);
-        figure.appendChild(deleteIcon);
-        galeriePhoto.appendChild(figure);
-    }
+    figure.appendChild(img);
+    figure.appendChild(deleteIcon);
+    galeriePhoto.appendChild(figure);
+
+        // Quand on appuie sur l'icone poubelle
+    deleteIcon.addEventListener("click", async function() {
+        const workId = deleteIcon.dataset.workId;
+        // Supprimer le projet avec l'identifiant workId
+        await supprimerProjet(workId);
+        // Supprimer l'élément de la galerie-photo
+        galeriePhoto.removeChild(figure);
+    });
+}
     // Pour mettre les éléments dans la div galerie-photo
 const galeriePhoto = document.querySelector(".galerie-photo");
     
@@ -144,4 +153,3 @@ retourneModalBtn.addEventListener("click", function(e) {
     document.getElementById("modal-ajout-photo").style.display = "none";
     document.querySelector(".modal-galerie-photo").style.display = "flex";
 });
-
