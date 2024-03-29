@@ -2,7 +2,7 @@ async function supprimerProjet(workId) {
     try {
         const token = getToken();
         if (!token) {
-            console.error("Jetons d\'accès non disponibles");
+            console.error("Jetons d'accès non disponibles");
             return;
         }
         const response = await fetch(`http://localhost:5678/api/works/${workId}`, {
@@ -22,8 +22,8 @@ async function supprimerProjet(workId) {
     } catch (error) {
         console.error("Erreur de suppression du projet:", error);
     }
+    afficherTousProjets();
 }
-
     // Afficher la modale au chargement de la page
 document.addEventListener("DOMContentLoaded", function() {
     authentification();
