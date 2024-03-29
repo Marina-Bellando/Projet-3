@@ -382,6 +382,10 @@ margin-right: 15px;
 	flex-direction: column;
 	align-items: center;
 }
+.cadre-ajouter-photo img {
+    max-width: 100%;
+    max-height: 100%;
+}
 .fa-regular.fa-image {
     font-size: 76px;
 	margin-top: 15px;
