@@ -1,35 +1,38 @@
-document.addEventListener("DOMContentLoaded", function() {
-    // Vérifie si l'utilisateur est connecté
-    if (getToken()) {
-        // Affiche le texte pour la modale
-        document.querySelector("#portfolio .js-modal").style.display = "inline";
-    } else {
-        // Cache le texte pour la modale
-        document.querySelector("#portfolio .js-modal").style.display = "none";
-    }
-    // Appel fonction d'authentification quand la page est chargée
-    authentification();
-});
-
-// Sélectionnez votre input file
+    // Sélectionne le fichier à envoyer
 const inputPhoto = document.getElementById("input-photo");
+const titreInput = document.getElementById("titre");
+const categorieSelect = document.getElementById("categorie");
+const btnValider = document.querySelector(".btn-valider");
 
-// Ajoutez un écouteur d'événements pour le changement de fichier
+function verifierchamps() {
+    if (titreInput.value.trim() !== "" && categorieSelect.value !== "disabled") {
+        btnValider.style.backgroundColor = "#1D6154";
+    } else {
+        btnValider.style.backgroundColor = "#A7A7A7";
+    }
+}
+
+    // Ajoute une écoute d'événements pour le changement de fichier
 inputPhoto.addEventListener("change", function(event) {
-    const file = event.target.files[0]; // Récupérer le fichier sélectionné
+    // Récupère le fichier sélectionné
+    const file = event.target.files[0];
     const cadreAjouterPhoto = document.querySelector(".cadre-ajouter-photo");
     
-    // Vérifiez si un fichier a été sélectionné
+    // Vérifie si un fichier a été sélectionné
     if (file) {
-        // Créez un objet URL à partir du fichier sélectionné
+    // Créer un objet URL du fichier sélectionné
         const imageUrl = URL.createObjectURL(file);
         
-        // Créez un élément image pour afficher l'image sélectionnée
+    // Créer un élément image pour afficher l'image sélectionnée
         const imgElement = document.createElement("img");
         imgElement.src = imageUrl;
 
-        // Ajoutez l'élément image à la div cadre-ajouter-photo
+    // Ajoute l'élément image à la div cadre-ajouter-photo
         cadreAjouterPhoto.innerHTML = "";
         cadreAjouterPhoto.appendChild(imgElement);
     }
 });
+
+    // Ajoute des écouteurs d'événements pour le bouton Valider
+titreInput.addEventListener("input", verifierchamps);
+categorieSelect.addEventListener("change", verifierchamps);

@@ -63,10 +63,10 @@
 					<div class ="cadre-ajouter-photo">
 						<i class="fa-regular fa-image"></i>
 						<label for="input-photo" class="btn-ajouterPhoto">+ Ajouter photo</label>
-						<input type="file" id="input-photo">
+						<input type="file" id="input-photo" name="input-photo">
 						<p class="format-photo">jpg, png : 4mo max</p>
 					</div>
-					<form action="#" method="post" id="formulaire-ajoutPhoto">
+					<form enctype="multipart/form-data" action="#" method="post" id="formulaire-ajoutPhoto" name="formulaire-ajoutPhoto">
 						<label for="titre">Titre</label>
 						<input type="text" name="titre" id="titre">
 						<label for="categorie">Catégorie</label>
