@@ -368,7 +368,7 @@ nav ul li a {
   border: none;
   margin-left: auto;
 }
-#titlemodal {
+.titlemodal {
   font-family: "Work Sans";
   font-weight: 400;
   font-size: 26px;
@@ -501,6 +501,9 @@ nav ul li a {
   box-shadow: 0px 4px 14px 0px #00000017;
   border: none;
   background-color: #ffffff;
+}
+#categorie option[value="placeholder"] {
+  display: none;
 }
 #modal-ajout-photo input[type="text"] {
   width: 420px;
