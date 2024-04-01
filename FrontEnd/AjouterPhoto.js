@@ -26,6 +26,47 @@ function verifierchamps() {
     }
 }
 
+// Fonction pour ajouter un projet à la galerie photo
+function ajouterProjetGaleriePhoto(projet) {
+    // Sélectionnez la galerie photo
+    const galeriePhoto = document.querySelector(".galerie-photo");
+
+    // Créez les éléments nécessaires pour afficher le projet
+    const figure = document.createElement("figure");
+    figure.classList.add("gallery-photo");
+    const img = document.createElement("img");
+    const deleteIcon = document.createElement("button");
+
+    // Définissez les attributs et le contenu des éléments
+    img.src = projet.imageUrl; // Assurez-vous que votre objet projet a une propriété imageUrl
+    deleteIcon.innerHTML = '<i class="fa-solid fa-trash-can"></i>';
+    deleteIcon.classList.add("delete-icon");
+    deleteIcon.dataset.workId = projet.id; // Assurez-vous que votre objet projet a une propriété id unique
+
+    // Ajoutez les éléments à la figure
+    figure.appendChild(img);
+    figure.appendChild(deleteIcon);
+
+    // Ajoutez la figure à la galerie photo
+    galeriePhoto.appendChild(figure);
+
+    // Ajoutez un gestionnaire d'événements pour supprimer le projet si nécessaire
+    deleteIcon.addEventListener("click", async function() {
+        const workId = deleteIcon.dataset.workId;
+        // Supprimer le projet avec l'identifiant workId
+        await supprimerProjet(workId);
+        // Supprimer l'élément de la galerie-photo
+        galeriePhoto.removeChild(figure);
+    });
+}
+
+// Fonction pour afficher tous les projets dans la galerie photo
+function afficherTousProjetsDansGaleriePhoto() {
+    // Appelez votre fonction pour afficher tous les projets dans la galerie photo
+    afficherTousProjets();
+}
+
+
     // Ajoute une écoute d'événements pour le changement de fichier
 inputPhoto.addEventListener("change", function(event) {
     // Récupère le fichier sélectionné
@@ -93,6 +134,10 @@ btnValider.addEventListener("click", function(event) {
             .then(data => {
                 console.log("Réponse de l'API :", data);
                 // Vous pouvez ajouter ici du code pour traiter la réponse de l'API si nécessaire
+            // Ajouter le nouveau projet à la galerie photo après l'ajout réussi
+            ajouterProjetGaleriePhoto(data);
+            // Mettre à jour la galerie photo après l'ajout du projet
+            afficherTousProjetsDansGaleriePhoto();
             })
             .catch(error => {
                 console.error("Erreur :", error);
