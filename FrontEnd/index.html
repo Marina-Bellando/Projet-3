@@ -33,7 +33,7 @@
 	</nav>
 </header>
 <main>
-	<section id="introduction">
+	<section id="introduction" aria-label="Introduction">
 		<figure>
 			<img src="./assets/images/sophie-bluel.png" alt="">
 		</figure>
@@ -46,11 +46,11 @@
 	</section>
 	<section id="portfolio">
 		<h2>Mes Projets <a href="#modal1" class="js-modal"><i class="fa-regular fa-pen-to-square"></i>modifier</a></h2>
-		<aside id="modal1" class="modal" aria-hidden="true" role="dialog" aria-labelledby="titlemodal" style="display: none;">
+		<div id="modal1" class="modal" aria-hidden="true" role="dialog" style="display: none;">
 			<div class="modal-wrapper js-modal-stop">
 				<div class="modal-galerie-photo">
 					<button class="js-modal-close"><i class="fa-solid fa-xmark"></i></button>
-					<h3 id="titlemodal">Galerie photo</h3>
+					<h3 class="titlemodal">Galerie photo</h3>
 					<div class="galerie-photo"></div>
 					<div class="separateur"></div>
 					<button class="btn-AjoutPhoto">Ajouter une photo</button>
@@ -58,7 +58,7 @@
 				<div id="modal-ajout-photo">
 					<button class="retourner-modal1"><i class="fa-solid fa-arrow-left"></i></button>
 					<button class="js-modal-close"><i class="fa-solid fa-xmark"></i></button>
-					<h3 id="titlemodal">Ajout Photo</h3>
+					<h3 class="titlemodal">Ajout Photo</h3>
 					<div class ="cadre-ajouter-photo">
 						<i class="fa-regular fa-image"></i>
 						<label for="input-photo" class="btn-ajouterPhoto">+ Ajouter photo</label>
@@ -70,7 +70,7 @@
 						<input type="text" name="titre" id="titre">
 						<label for="categorie">Catégorie</label>
 						<select name="categorie" id="categorie">
-							<option value="disabled" selected></option>
+							<option value="placeholder" selected disabled hidden>&nbsp;</option>
 							<option value="Objets">Objets</option>
 							<option value="Appartements">Appartements</option>
 							<option value="Hotels&restaurants">Hotels & restaurants</option>
@@ -80,7 +80,7 @@
 					</form>
 				</div>
 			</div>
-		</aside>
+		</div>
 		<div class="filtres">
 		</div>
 		<div class="gallery">
