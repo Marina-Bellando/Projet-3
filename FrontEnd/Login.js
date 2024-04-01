@@ -44,6 +44,8 @@ async function authentification () {
 document.addEventListener("DOMContentLoaded", function() {
     const modeEdition = document.getElementById("mode-edition");
     const lienLogin = document.getElementById("lien-login");
+    const h1 = document.querySelector("header h1");
+    const nav = document.querySelector("header nav");
     // Vérifie si l'utilisateur est connecté grâce au token
     if (getToken()) {
    // Affiche le header "mode-edition" quand il est connecté
@@ -57,6 +59,13 @@ document.addEventListener("DOMContentLoaded", function() {
     // Pour désactiver le lien de connexion
             lienLogin.href = "#";
         }
+    // Met un espacement avec le mode edition et le header
+        if (h1) {
+            h1.style.marginTop = "40px";
+        }
+        if (nav) {
+            nav.style.marginTop = "40px"
+        }
     } else {
     // Cache le header "mode-edition" quand il n'est pas connecté
         if (modeEdition) {
@@ -67,6 +76,13 @@ document.addEventListener("DOMContentLoaded", function() {
             lienLogin.textContent = "login";
     // Remet l'URL d'origine
             lienLogin.href = "login.html";
+        }
+    // Rétablit l'espacement avec le mode edition et le header
+        if (h1) {
+            h1.style.marginTop = "0px";
+        }
+        if (nav) {
+            nav.style.marginTop = "0px";
         }
     }
 });

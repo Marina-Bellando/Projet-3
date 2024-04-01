@@ -59,7 +59,6 @@ function ajouterProjetGaleriePhoto(projet) {
         galeriePhoto.removeChild(figure);
     });
 }
-
 // Fonction pour afficher tous les projets dans la galerie photo
 function afficherTousProjetsDansGaleriePhoto() {
     // Appelez votre fonction pour afficher tous les projets dans la galerie photo
