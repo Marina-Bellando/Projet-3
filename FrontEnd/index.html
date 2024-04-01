@@ -13,14 +13,15 @@
 	<script src="Login.js" defer></script>
 	<script src="Modale.js" defer></script>
 	<script src="SuppressionTravaux.js" defer></script>
+	<script src="AjouterPhoto.js" defer></script>
 	<script src="https://kit.fontawesome.com/1c56793117.js" crossorigin="anonymous"></script>
 </head>
 <body>
-<header id="mode-edition">
-	<i class="fa-regular fa-pen-to-square"></i>
-	<p>Mode édition</p>
-</header>
 <header>
+	<div id="mode-edition">
+		<i class="fa-regular fa-pen-to-square"></i>
+		<p>Mode édition</p>
+	</div>
 	<h1>Sophie Bluel <span>Architecte d'intérieur</span></h1>
 	<nav>
 		<ul>
@@ -45,7 +46,6 @@
 	</section>
 	<section id="portfolio">
 		<h2>Mes Projets <a href="#modal1" class="js-modal"><i class="fa-regular fa-pen-to-square"></i>modifier</a></h2>
-
 		<aside id="modal1" class="modal" aria-hidden="true" role="dialog" aria-labelledby="titlemodal" style="display: none;">
 			<div class="modal-wrapper js-modal-stop">
 				<div class="modal-galerie-photo">
@@ -62,10 +62,10 @@
 					<div class ="cadre-ajouter-photo">
 						<i class="fa-regular fa-image"></i>
 						<label for="input-photo" class="btn-ajouterPhoto">+ Ajouter photo</label>
-						<input type="file" id="input-photo">
+						<input type="file" id="input-photo" name="input-photo">
 						<p class="format-photo">jpg, png : 4mo max</p>
 					</div>
-					<form action="#" method="post" id="formulaire-ajoutPhoto">
+					<form enctype="multipart/form-data" action="#" method="post" id="formulaire-ajoutPhoto" name="formulaire-ajoutPhoto">
 						<label for="titre">Titre</label>
 						<input type="text" name="titre" id="titre">
 						<label for="categorie">Catégorie</label>
@@ -81,9 +81,7 @@
 				</div>
 			</div>
 		</aside>
-		
 		<div class="filtres">
-
 		</div>
 		<div class="gallery">
 			<figure>
@@ -146,7 +144,6 @@
 		</form>
 	</section>
 </main>
-
 <footer>
 	<nav>
 		<ul>

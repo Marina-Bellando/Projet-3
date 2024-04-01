@@ -2,444 +2,520 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 body {
-	line-height: 1;
+  line-height: 1;
 }
-ol, ul {
-	list-style: none;
+ol,
+ul {
+  list-style: none;
 }
-blockquote, q {
-	quotes: none;
+blockquote,
+q {
+  quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
+
 /** end reset css**/
 body {
-	max-width: 1140px;
-	margin:auto;
-	font-family: 'Work Sans' ;
-	font-size: 14px;
-	background-color: #fffef8;
+  max-width: 1140px;
+  margin: auto;
+  font-family: "Work Sans";
+  font-size: 14px;
+  background-color: #fffef8;
 }
 header {
-	display: flex;
-	justify-content: space-between;
-	margin: 50px 0
+  display: flex;
+  justify-content: space-between;
+  margin: 50px 0;
 }
 section {
-	margin: 50px 0
+  margin: 50px 0;
 }
-
-h1{
-	display: flex;
-	flex-direction: column;
-	font-family: 'Syne';
-	font-size: 22px;
-	font-weight: 800;
-	color: #B1663C
+h1 {
+  display: flex;
+  flex-direction: column;
+  font-family: "Syne";
+  font-size: 22px;
+  font-weight: 800;
+  color: #b1663c;
 }
-
 h1 > span {
-	font-family: 'Work Sans';
-	font-size:10px;
-	letter-spacing: 0.1em;
-;
+  font-family: "Work Sans";
+  font-size: 10px;
+  letter-spacing: 0.1em;
 }
-
-h2{
-	font-family: 'Syne';
-	font-weight: 700;
-	font-size: 30px;
-	color: #1D6154
+h2 {
+  font-family: "Syne";
+  font-weight: 700;
+  font-size: 30px;
+  color: #1d6154;
 }
 nav ul {
-	display: flex;
-	align-items: center;
-	list-style-type: none;
-
+  display: flex;
+  align-items: center;
+  list-style-type: none;
 }
 nav li {
-	padding: 0 10px;
-	font-size: 1.2em;
+  padding: 0 10px;
+  font-size: 1.2em;
 }
-
 li:hover {
-	color: #B1663C;
+  color: #b1663c;
 }
 #introduction {
-	display: flex;
-	align-items: center;
+  display: flex;
+  align-items: center;
 }
 #introduction figure {
-	flex: 1
+  flex: 1;
 }
 #introduction img {
-	display: block;
-	margin: auto;
-	width: 80%;
+  display: block;
+  margin: auto;
+  width: 80%;
 }
-
 #introduction article {
-	flex: 1
+  flex: 1;
 }
 #introduction h2 {
-	margin-bottom: 1em;
+  margin-bottom: 1em;
 }
-
 #introduction p {
-	margin-bottom: 0.5em;
+  margin-bottom: 0.5em;
 }
 #portfolio h2 {
-	text-align: center;
-	margin-bottom: 1em;
+  text-align: center;
+  margin-bottom: 1em;
 }
 .gallery {
-	width: 100%;
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	grid-column-gap: 20px;
-	grid-row-gap: 20px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
 }
-
 .gallery img {
-	width: 100%;
-
+  width: 100%;
 }
 #contact {
-	width: 50%;
-margin: auto;
+  width: 50%;
+  margin: auto;
 }
 #contact > * {
-	text-align: center;
-
+  text-align: center;
 }
-#contact h2{
-	margin-bottom: 20px;
+#contact h2 {
+  margin-bottom: 20px;
 }
 #contact form {
-	text-align: left;
-	margin-top:30px;
-	display: flex;
-	flex-direction: column;
+  text-align: left;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
 }
-
 #contact input {
-	height: 50px;
-	font-size: 1.2em;
-	border: none;
-	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+  height: 50px;
+  font-size: 1.2em;
+  border: none;
+  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
 }
 #contact label {
-	margin: 2em 0 1em 0;
+  margin: 2em 0 1em 0;
 }
 #contact textarea {
-	border: none;
-	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+  border: none;
+  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
 }
-
-input[type="submit"]{
-	font-family: 'Syne';
-	font-weight: 700;
-	color: white;
-	background-color: #1D6154;
-	margin : 2em auto ;
-	width: 180px;
-	text-align: center;
-	border-radius: 60px ;
+input[type="submit"] {
+  font-family: "Syne";
+  font-weight: 700;
+  color: white;
+  background-color: #1d6154;
+  margin: 2em auto;
+  width: 180px;
+  text-align: center;
+  border-radius: 60px;
 }
 footer {
-	background-color: #ffffff;
-	height: 60px;
+  background-color: #ffffff;
+  height: 60px;
 }
 footer nav ul {
-	display: flex;
-	justify-content: flex-end;
-	margin: 2em
+  display: flex;
+  justify-content: flex-end;
+  margin: 2em;
 }
 .filtres {
-	margin-left: 280px;
+  margin-left: 280px;
 }
 .filtres button {
-	font-family: 'Syne';
-	font-weight: 700;
-	color: #1D6154;
-	background-color: #FFFEF8;
-	margin : 2em auto ;
-	text-align: center;
-	border-radius: 60px ;
-	border-color: #1D6154;
-	border-width: 1px;
-	margin-right: 10px; 
-	height: 37px;
-	padding-left: 30px;
-	padding-right: 30px;
+  font-family: "Syne";
+  font-weight: 700;
+  color: #1d6154;
+  background-color: #fffef8;
+  margin: 2em auto;
+  text-align: center;
+  border-radius: 60px;
+  border-color: #1d6154;
+  border-width: 1px;
+  margin-right: 10px;
+  height: 37px;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 .filtres button:focus {
-	color: white;
-	background-color: #1D6154;
+  color: white;
+  background-color: #1d6154;
 }
 
-	/*Login*/
+/*Login*/
 .Loginhtml {
-	font-weight: bold;
+  font-weight: bold;
 }
 #contact {
-	padding-top: 90px;
-	padding-bottom: 180px;
+  padding-top: 90px;
+  padding-bottom: 180px;
 }
 #MdpO {
-	margin: auto;
-	color: inherit;
+  margin: auto;
+  color: inherit;
 }
 nav ul li a {
-	text-decoration: none;
-	color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 #error-message {
-	color:#B1663C;
+  color: #b1663c;
 }
-	/*Après Connexion effectuée*/
+
+/*Après Connexion effectuée*/
 #mode-edition {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	background-color: #000000;
-	color: #ffffff;
-	height: 59px;
-	margin-top: 0;
-	font-family: "Work Sans";
-	font-size: 16px;
-	font-weight: 400;
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000000;
+  color: #ffffff;
+  height: 59px;
+  font-family: "Work Sans";
+  font-size: 16px;
+  font-weight: 400;
+  padding-top: 8px;
 }
-#mode-edition i{
-margin-right: 15px;
+#mode-edition i {
+  margin-right: 15px;
 }
 #portfolio h2 a {
-	text-decoration: none;
-	font-family: "Work Sans";
-	font-weight: 400;
-	color: black;
-	font-size: 14px;
+  text-decoration: none;
+  font-family: "Work Sans";
+  font-weight: 400;
+  color: black;
+  font-size: 14px;
 }
-	
 #portfolio a .fa-pen-to-square {
-	margin-right: 15px;
-	margin-left: 30px;
+  margin-right: 15px;
+  margin-left: 30px;
 }
 
-	/*Modale*/
-
+/*Modale*/
 .modal {
 	position: fixed;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	top: 0;
-	left: 0;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	max-width: 630px;
+	max-height: 688px;
 	width: 100%;
-	height: 100%;
-	background: rgba(0, 0, 0, 0.08);
+	background-color: #ffffff;
+	border-radius: 10px;
+	padding: 20px;
+	z-index: 1000;
+	overflow: auto;
 }
 .modal-wrapper {
-	overflow: auto;
-	width : 630px;
-	max-width: calc(100vw - 20px);
-	max-height: calc(100vh -20px);
-	padding: 20px;
-	background-color: #ffffff;
-	position: relative;
-	border-radius: 10px;
 	text-align: center;
 }
-.modal-galerie-photo{
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+#introduction, #portfolio, #contact {
+  position: relative;
+  z-index: 1;
+}
+.modal-galerie-photo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .js-modal-close {
-	font-size: 18px;
-	right:6px;
-	background-color: #ffffff;
-	border: none;
-	margin-left: auto;
+  font-size: 18px;
+  right: 6px;
+  background-color: #ffffff;
+  border: none;
+  margin-left: auto;
 }
 #titlemodal {
-	font-family: "Work Sans";
-	font-weight: 400;
-    font-size: 26px;
-    color: black;
-    margin-bottom: 40px;
-	text-align: center;
+  font-family: "Work Sans";
+  font-weight: 400;
+  font-size: 26px;
+  color: black;
+  margin-bottom: 40px;
+  text-align: center;
 }
-.galerie-photo{
-	display: grid;
-	grid-template-columns: repeat(5, 1fr);
-	grid-template-rows: repeat(3, auto);
-	grid-column-gap: 10px;
-	grid-row-gap: 30px;
-	margin-top: 40px;
-	margin-bottom: 30px;
-	width: 420px;
+.galerie-photo {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(3, auto);
+  grid-column-gap: 10px;
+  grid-row-gap: 30px;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  width: 420px;
 }
 .gallery-photo img {
-	max-width: 100%;
-	height: auto;
+  max-width: 100%;
+  height: auto;
 }
 .gallery-photo {
-	position: relative;
+  position: relative;
 }
 .delete-icon {
-    position: absolute;
-	top :6px;
-	right: 4px;
-    z-index: 1;
-	padding: 0;
-	border: none;
-	border-radius: 2px;
+  position: absolute;
+  top: 6px;
+  right: 4px;
+  z-index: 1;
+  padding: 0;
+  border: none;
+  border-radius: 2px;
 }
 .fa-trash-can {
-	color: #ffffff;
-	background-color: #000000;
-	border: 4px solid #000000;
-	border-radius: 2px;
-	padding: 2%;
+  color: #ffffff;
+  background-color: #000000;
+  border: 4px solid #000000;
+  border-radius: 2px;
+  padding: 2%;
 }
 .modal-galerie-photo .separateur {
-	width: 420px;
+  width: 420px;
 }
 #modal1 .btn-AjoutPhoto {
-    font-family: "Syne";
-	font-weight: 700;
-	color: white;
-	background-color: #1D6154;
-	width: 180px;
-	height: 36px;
-	text-align: center;
-	border-radius: 60px;
-	border: none;
-	margin-top: 20px;
-	margin-bottom: 20px;
+  font-family: "Syne";
+  font-weight: 700;
+  color: white;
+  background-color: #1d6154;
+  width: 180px;
+  height: 36px;
+  text-align: center;
+  border-radius: 60px;
+  border: none;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
-	/*Modale Ajout Photo*/
+/*Modale Ajout Photo*/
 #modal-ajout-photo {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .retourner-modal1 {
-	position: absolute;
-	font-size: 21px;
-	left: 20px;
-	background-color: #ffffff;
-	border: none;
+  position: absolute;
+  font-size: 21px;
+  left: 20px;
+  background-color: #ffffff;
+  border: none;
 }
 #titlemodal {
-	position: relative;
-	top: 34px;
+  position: relative;
+  top: 34px;
 }
 .cadre-ajouter-photo {
-	background-color: #e8f1f6;
-	width: 420px;
-	height: 169px;
-	border-radius: 3px;
-	margin-top: 30px;
-	margin-bottom: 30px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+  background-color: #e8f1f6;
+  width: 420px;
+  height: 169px;
+  border-radius: 3px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cadre-ajouter-photo img {
+  max-width: 100%;
+  max-height: 100%;
 }
 .fa-regular.fa-image {
-    font-size: 76px;
-	margin-top: 15px;
-	margin-bottom: 7px;
-	color: #b9c5cc;
+  font-size: 76px;
+  margin-top: 15px;
+  margin-bottom: 7px;
+  color: #b9c5cc;
 }
 .btn-ajouterPhoto {
-	width: 173px;
-	height: 36px;
-	border-radius: 50px;
-	background-color: #C8D6DC;
-	border: none;
-	color: #306685;
-	margin-bottom: 7px;
-    line-height: 36px;
-	text-align: center !important;
+  width: 173px;
+  height: 36px;
+  border-radius: 50px;
+  background-color: #c8d6dc;
+  border: none;
+  color: #306685;
+  margin-bottom: 7px;
+  line-height: 36px;
+  text-align: center !important;
 }
 #input-photo {
-    display: none;
+  display: none;
 }
 .format-photo {
-	font-family: "Work Sans";
-	font-size: 10px;
-	font-weight: 400;
-	color: #444444;
+  font-family: "Work Sans";
+  font-size: 10px;
+  font-weight: 400;
+  color: #444444;
 }
 #formulaire-ajoutPhoto {
-	width: 420px;
+  width: 420px;
 }
-#modal-ajout-photo form{
-	display: grid;
-	grid-template-columns: 1fr;
-	grid-gap: 10px;
+#modal-ajout-photo form {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 10px;
 }
 #modal-ajout-photo label {
-	text-align: left;
+  text-align: left;
 }
 #modal-ajout-photo select {
-	width: 420px;
-	height: 51px;
-	box-shadow: 0px 4px 14px 0px #00000017;
-	border: none;
-	background-color: #ffffff;
+  width: 420px;
+  height: 51px;
+  box-shadow: 0px 4px 14px 0px #00000017;
+  border: none;
+  background-color: #ffffff;
 }
 #modal-ajout-photo input[type="text"] {
-	width: 420px;
-	height: 51px;
-	box-shadow: 0px 4px 14px 0px #00000017;
-	border: none;
+  width: 420px;
+  height: 51px;
+  box-shadow: 0px 4px 14px 0px #00000017;
+  border: none;
 }
 input[type="submit"].btn-valider {
-	background-color: #A7A7A7;
-	border: none;
-	height: 36px;
-	margin-top: 0;
+  background-color: #a7a7a7;
+  border: none;
+  height: 36px;
+  margin-top: 0;
 }
 .separateur {
-    border-top: 1px solid #B3B3B3;
-    margin-top: 25px;
-    margin-bottom: 20px;
+  border-top: 1px solid #b3b3b3;
+  margin-top: 25px;
+  margin-bottom: 20px;
 }
