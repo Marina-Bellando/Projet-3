@@ -57,12 +57,6 @@ function ajouterProjetGaleriePhoto(projet) {
     });
 }
 
-    // Pour afficher tous les projets dans la galerie photo
-function afficherTousProjetsDansGaleriePhoto() {
-    // Appele la fonction pour afficher tous les projets dans la galerie photo
-    afficherTousProjets();
-}
-
     // Ajoute une écoute d'événements pour le changement de fichier
 inputPhoto.addEventListener("change", function(event) {
     // Récupère le fichier sélectionné
@@ -124,7 +118,7 @@ btnValider.addEventListener("click", function(event) {
     // Ajoute le nouveau projet à la galerie photo après l'ajout réussi
             ajouterProjetGaleriePhoto(data);
     // Mets à jour la galerie photo après l'ajout du projet
-            afficherTousProjetsDansGaleriePhoto();
+            afficherTousProjets();
             })
             .catch(error => {
                 console.error("Erreur :", error);
