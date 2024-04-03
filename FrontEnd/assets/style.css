@@ -257,6 +257,8 @@ footer nav ul {
   justify-content: flex-end;
   margin: 2em;
 }
+
+/* Boutons catégories*/
 .filtres {
   margin-left: 280px;
 }
@@ -376,6 +378,8 @@ nav ul li a {
   margin-bottom: 40px;
   text-align: center;
 }
+
+/*Modale Supprimer Photo*/
 .galerie-photo {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
