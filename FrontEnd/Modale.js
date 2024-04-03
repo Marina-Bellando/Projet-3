@@ -88,6 +88,7 @@ function creerProjet2(work) {
         galeriePhoto.removeChild(figure);
     });
 }
+
     // Pour mettre les éléments dans la div galerie-photo
 const galeriePhoto = document.querySelector(".galerie-photo");
         

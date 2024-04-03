@@ -51,6 +51,12 @@ async function afficherProjet() {
     }
 }
 
+    // Ajoute un gestionnaire d'événements DOMContentLoaded
+document.addEventListener("DOMContentLoaded", function() {
+    // Appele afficherTousProjets pour afficher nouveaux projets
+    afficherTousProjets();
+});
+
     // Récupère les données catégories de l'API
 async function recupererCategories() {
     try {
@@ -100,11 +106,13 @@ async function creerBoutons() {
         console.error(error.message);
     }
 }
+
     // Fonction pour afficher tous les projets
 async function afficherTousProjets() {
     supprimerFigures();
     await afficherProjet();
 }
+
     // Fonction pour filtrer les éléments par catégorie
 async function filtrerParCategorie(categorie) {
     supprimerFigures();

@@ -4,7 +4,6 @@ async function authentification() {
     formulaireConnexion.addEventListener("submit", async function (event) {
     // Evite le chargement d'une nouvelle page
         event.preventDefault();
-
     // Récupère les valeurs email et password du formulaire
     let connexion = {
         email: document.getElementById("email").value,
