@@ -20,10 +20,6 @@ const openModal = function (e) {
     e.preventDefault();
     // Récupère l'élément modal à partir de son attribut href
     modal = document.querySelector(e.target.getAttribute("href"));
-    // Récupère la section "introduction"
-    const introductionSection = document.getElementById("introduction");
-    // Insère la modale juste après la section "introduction"
-    introductionSection.insertAdjacentElement("afterend", modal);
     // Affichage de la modale
     modal.style.display = null;
     modal.removeAttribute("aria-hidden");
